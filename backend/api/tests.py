@@ -13,6 +13,7 @@ class TaskiAPITestCase(TestCase):
         response = self.guest_client.get('/api/tasks/')
         self.assertEqual(response.status_code, HTTPStatus.OK)
 
+
     def test_task_creation(self):
         """Проверка создания задачи."""
         data = {'title': 'Test', 'description': 'Test'}
